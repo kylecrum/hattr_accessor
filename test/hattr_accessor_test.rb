@@ -23,11 +23,6 @@ class HattrAccessorTest < Test::Unit::TestCase
     @custom_field = CustomField.new
   end
   
-  def test_should_alias_method_chain_configuration
-    assert CustomField.method_defined?(:configuration_with_hattr_accessor)
-    assert CustomField.method_defined?(:configuration_without_hattr_accessor)
-  end
-  
   def test_configuration_should_be_a_hash_by_default
     assert_equal({}, @custom_field.configuration)
   end
